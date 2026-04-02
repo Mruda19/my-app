@@ -15,7 +15,7 @@ phases:
       - echo Pushing image to ECR...
       - docker push 989615686095.dkr.ecr.ap-southeast-1.amazonaws.com/my-app:$IMAGE_TAG
       - docker push 989615686095.dkr.ecr.ap-southeast-1.amazonaws.com/my-app:latest
-      - printf '[{"name":"my-app","imageUri":"%s"}]' 989615686095.dkr.ecr.ap-southeast-1.amazonaws.com/my-app:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"my-app-container","imageUri":"%s"}]' 989615686095.dkr.ecr.ap-southeast-1.amazonaws.com/my-app:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
